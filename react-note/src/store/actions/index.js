@@ -17,7 +17,7 @@ export const DELETING_NOTE = 'DELETING_NOTE';
 export const EDIT_NOTE = 'EDIT_NOTE';
 export const EDITING_NOTE = 'EDITING_NOTE';
 
-const URL = 'https://api-lambda-notes.herokuapp.com/api/notes';
+const URL = 'https://agile-bastion-89851.herokuapp.com/api/notes';
 
 export const getNotes = () => {
 	return dispatch => {

@@ -1,5 +1,3 @@
-export { customLayout } from './Layout';
-export { customButton } from './Button';
 export {
 	AuthFormContainer,
 	AuthForm,
@@ -7,3 +5,5 @@ export {
 	FormInput,
 	Button
 } from './AuthForm';
+
+export { Container, Wrapper, Heading, NavButton } from './NavStyle';
