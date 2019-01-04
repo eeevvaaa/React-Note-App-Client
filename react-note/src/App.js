@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
+// import './App.css';
 import Navigation from './components/Nav/Navigation';
 import { Route } from 'react-router-dom';
-import NoteList from './components/NoteList';
-import Note from './components/Note';
-import NewNote from './components/NewNote';
-import EditNote from './components/EditNote';
+import { NoteList, Note, NewNote, EditNote } from './components/Notes';
 import styled from 'styled-components';
 // import DeleteNote from './components/DeleteNote';
 

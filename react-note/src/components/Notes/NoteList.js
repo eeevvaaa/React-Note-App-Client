@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import NoteCard from './NoteCard';
-import '../App.css';
+// import '../App.css';
 import styled from 'styled-components';
 
 export default class NoteList extends Component {

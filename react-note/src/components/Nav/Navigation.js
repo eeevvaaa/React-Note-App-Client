@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Container, Wrapper, Heading, NavButton } from './NavStyle';
+import { Container, Wrapper, Heading, NavButton } from '../../styles';
 
 export default class Navigation extends Component {
 	render() {
