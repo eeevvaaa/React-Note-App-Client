@@ -73,15 +73,7 @@ class Login extends Component {
 						<Button>Login</Button>
 					</FormDiv>
 				</AuthForm>
-<<<<<<< HEAD
 				{this.state.message ? <h4>{this.state.message}</h4> : undefined}
-=======
-				{this.state.message ? (
-					<h4 style={{ textAlign: 'center' }}>{this.state.message}</h4>
-				) : (
-					undefined
-				)}
->>>>>>> 8f1b553e1a9e2ccd9315e2773d1cd602ddf9f2d5
 			</AuthFormContainer>
 		);
 	}
