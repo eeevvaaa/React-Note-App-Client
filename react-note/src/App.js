@@ -72,7 +72,7 @@ class App extends Component {
 						<NoteContainer>
 							<Route exact path="/" component={ListView} />
 							<Route path="/notes/:id" component={DetailView} />
-							<Route path="/create" component={NewView} />
+							<Route path="/new" component={NewView} />
 							<Route path="/edit/:id" component={EditView} />
 						</NoteContainer>
 					</RightContainer>

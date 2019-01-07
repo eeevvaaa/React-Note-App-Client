@@ -54,7 +54,7 @@ export const addNote = note => {
 		dispatch({ type: ADDING_NOTE });
 
 		axios
-			.post(`${URL}/create`, note)
+			.post(URL, note)
 			.then(response => {
 				dispatch({ type: ADD_NOTE, payload: response.data });
 			})
