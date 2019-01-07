@@ -32,12 +32,11 @@ class Login extends Component {
 		axios
 			.post(url, this.state.user)
 			.then(res => {
-				console.log('RES', res);
 				localStorage.setItem('jwtToken', res.data.token);
 				this.props.history.push('/');
 			})
 			.catch(err => {
-				console.log('ERR', err);
+				console.log('err', err);
 				this.setState({
 					message: 'Authentication failed',
 					user: { ...initialUser }

@@ -44,8 +44,6 @@ class App extends Component {
 
 	componentDidUpdate(prevProps) {
 		const { pathname } = this.props.location;
-		console.log(this.props);
-		console.log(prevProps);
 		if (pathname === '/' && pathname !== prevProps.location.pathname) {
 			this.authenticate();
 		}
