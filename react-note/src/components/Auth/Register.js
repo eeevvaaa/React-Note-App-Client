@@ -26,8 +26,7 @@ class Register extends Component {
 
 	handleSubmit = e => {
 		e.preventDefault();
-		//TODO: enter backend url
-		const url = '';
+		const url = 'https://agile-bastion-89851.herokuapp.com/api/users/register';
 
 		axios
 			.post(url, this.state.user)
