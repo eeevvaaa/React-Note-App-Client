@@ -31,3 +31,11 @@ export {
 	CancelButton,
 	DeleteButton
 } from './Modal';
+
+export {
+	AppContainer,
+	RightContainer,
+	NoteContainer,
+	AuthContainer,
+	NavContainer
+} from './Main';

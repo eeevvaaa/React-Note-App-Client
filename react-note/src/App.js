@@ -6,6 +6,13 @@ import { Navigation } from './components/Nav';
 import { DetailView, NewView, ListView, EditView } from './views';
 import { Register, Login } from './components/Auth';
 import axios from 'axios';
+import {
+	AppContainer,
+	RightContainer,
+	NoteContainer,
+	AuthContainer,
+	NavContainer
+} from './styles';
 
 class App extends Component {
 	state = {
@@ -58,24 +65,24 @@ class App extends Component {
 	render() {
 		if (this.state.loggedIn) {
 			return (
-				<div className="app-container">
+				<AppContainer>
 					<Navigation logOut={this.logOut} />
 
-					<div className="content-container">
-						<div className="content-wrapper">
+					<RightContainer>
+						<NoteContainer>
 							<Route exact path="/" component={ListView} />
 							<Route path="/notes/:id" component={DetailView} />
 							<Route path="/create" component={NewView} />
 							<Route path="/edit/:id" component={EditView} />
-						</div>
-					</div>
-				</div>
+						</NoteContainer>
+					</RightContainer>
+				</AppContainer>
 			);
 		} else {
 			return (
-				<div className="app-container">
-					<div className="auth-wrapper">
-						<div className="nav-wrapper">
+				<AppContainer>
+					<AuthContainer>
+						<NavContainer>
 							<h2>React Notes</h2>
 							<nav>
 								<NavLink
@@ -96,11 +103,11 @@ class App extends Component {
 									Login
 								</NavLink>
 							</nav>
-						</div>
+						</NavContainer>
 						<Route path="/register" component={Register} />
 						<Route path="/login" component={Login} />
-					</div>
-				</div>
+					</AuthContainer>
+				</AppContainer>
 			);
 		}
 	}
