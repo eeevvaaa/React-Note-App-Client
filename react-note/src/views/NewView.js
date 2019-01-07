@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addNote, getNotes } from '../store/actions';
 
-import NewNote from '../components/Notes/NewNote';
+import NewNote from '../components/Notes';
 
 class NewView extends Component {
 	state = {
