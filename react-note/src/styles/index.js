@@ -15,7 +15,7 @@ export {
 	NoteCard,
 	TitleHeading,
 	Hr,
-	TextBody,
+	NoteContent,
 	SingleNoteContainer,
 	SingleNoteActions,
 	FormContainer,

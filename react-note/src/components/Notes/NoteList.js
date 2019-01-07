@@ -8,7 +8,7 @@ import {
 	NoteCard,
 	TitleHeading,
 	Hr,
-	TextBody
+	NoteContent
 } from '../../styles';
 
 const NotesList = props => {
@@ -19,11 +19,11 @@ const NotesList = props => {
 			<NotesWrapper>
 				{props.notes.map((note, i) => (
 					<NoteCard key={i}>
-						<Link to={`/notes/${note._id}`} style={{ color: '#000' }}>
+						<Link to={`/notes/${note.id}`} style={{ color: '#000' }}>
 							<TitleHeading>{note.title}</TitleHeading>
 						</Link>
 						<Hr />
-						<TextBody>{note.textBody}</TextBody>
+						<NoteContent>{note.content}</NoteContent>
 					</NoteCard>
 				))}
 			</NotesWrapper>

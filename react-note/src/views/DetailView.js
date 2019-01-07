@@ -8,7 +8,8 @@ class DetailView extends Component {
 	state = { show: false };
 
 	componentDidMount() {
-		this.props.getNote(this.props.match.params.id);
+		const id = this.props.match.params.id;
+		this.props.getNote(id);
 	}
 
 	deleteNote = (e, id) => {

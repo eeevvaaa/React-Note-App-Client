@@ -7,7 +7,7 @@ import { NewNote } from '../components/Notes';
 class NewView extends Component {
 	state = {
 		title: '',
-		textBody: ''
+		content: ''
 	};
 
 	handleInput = e => {
@@ -16,9 +16,9 @@ class NewView extends Component {
 
 	addNote = e => {
 		e.preventDefault();
-		const { title, textBody } = this.state;
-		this.props.addNote({ title, textBody });
-		this.setState({ title: '', textBody: '' });
+		const { title, content } = this.state;
+		this.props.addNote({ title, content });
+		this.setState({ title: '', content: '' });
 		this.props.getNotes();
 		this.props.history.push('/');
 	};
@@ -29,7 +29,7 @@ class NewView extends Component {
 				addNote={this.addNote}
 				handleInput={this.handleInput}
 				title={this.state.title}
-				textBody={this.state.textBody}
+				content={this.state.content}
 			/>
 		);
 	}

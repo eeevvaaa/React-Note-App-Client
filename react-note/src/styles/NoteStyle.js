@@ -43,7 +43,7 @@ export const Hr = styled.hr`
 	border: 1px solid #b7b5b7;
 `;
 
-export const TextBody = styled.p`
+export const NoteContent = styled.p`
 	height: 170px;
 	font-size: 1.4rem;
 	line-height: 25px;

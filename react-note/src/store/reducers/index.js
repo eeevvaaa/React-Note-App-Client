@@ -35,7 +35,7 @@ export default (state = initialState, action) => {
 			return {
 				...state,
 				notes: state.notes.map(note => {
-					if (note._id === action._id) {
+					if (note.id === action.id) {
 						return { ...action.payload };
 					} else {
 						return note;

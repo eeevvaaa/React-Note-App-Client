@@ -20,8 +20,8 @@ const NewNote = props => {
 					type="text"
 					placeholder="Note Content"
 					onChange={props.handleInput}
-					name="textBody"
-					value={props.textBody}
+					name="content"
+					value={props.content}
 				/>
 
 				<ActionButton type="submit">Save</ActionButton>

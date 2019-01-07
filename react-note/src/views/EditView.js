@@ -7,7 +7,7 @@ import { EditNote } from '../components/Notes';
 class EditView extends Component {
 	state = {
 		title: this.props.note.title,
-		textBody: this.props.note.textBody,
+		content: this.props.note.content,
 		show: false
 	};
 
@@ -29,9 +29,9 @@ class EditView extends Component {
 
 	editNote = (e, id) => {
 		e.preventDefault();
-		const { title, textBody } = this.state;
-		this.props.editNote(id, { title, textBody });
-		this.setState({ title: '', textBody: '' });
+		const { title, content } = this.state;
+		this.props.editNote(id, { title, content });
+		this.setState({ title: '', content: '' });
 	};
 
 	getNotes = () => {
@@ -47,7 +47,7 @@ class EditView extends Component {
 				editNote={this.editNote}
 				handleInput={this.handleInput}
 				title={this.state.title}
-				textBody={this.state.textBody}
+				content={this.state.content}
 				note={note}
 				getNotes={this.getNotes}
 				hideModal={this.hideModal}

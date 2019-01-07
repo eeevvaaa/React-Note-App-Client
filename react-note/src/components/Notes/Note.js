@@ -8,14 +8,14 @@ const Note = props => {
 	return (
 		<SingleNoteContainer>
 			<SingleNoteActions>
-				<Link to={`/edit/${props.note._id}`}>
+				<Link to={`/edit/${props.note.id}`}>
 					<button type="button">Edit</button>
 				</Link>
 				<DeleteModal
 					show={props.show}
 					hideModal={props.hideModal}
 					deleteNote={props.deleteNote}
-					noteID={props.note._id}
+					noteID={props.note.id}
 				/>
 
 				<button type="button" onClick={props.showModal}>
@@ -24,7 +24,7 @@ const Note = props => {
 			</SingleNoteActions>
 
 			<h2>{props.note.title}</h2>
-			<p>{props.note.textBody}</p>
+			<p>{props.note.content}</p>
 		</SingleNoteContainer>
 	);
 };

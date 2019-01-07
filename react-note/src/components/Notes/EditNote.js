@@ -8,7 +8,7 @@ const EditNote = props => {
 		<FormContainer>
 			<h2>Edit Note:</h2>
 
-			<FormGroup onSubmit={e => props.editNote(e, props.note._id)}>
+			<FormGroup onSubmit={e => props.editNote(e, props.note.id)}>
 				<input
 					type="text"
 					placeholder="Note Title"
@@ -21,8 +21,8 @@ const EditNote = props => {
 					type="text"
 					placeholder="Note Content"
 					onChange={props.handleInput}
-					name="textBody"
-					value={props.textBody}
+					name="content"
+					value={props.content}
 				/>
 
 				<ActionButton type="submit" onClick={props.showModal}>
