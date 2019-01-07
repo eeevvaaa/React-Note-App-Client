@@ -24,7 +24,7 @@ export const getNotes = () => {
 		dispatch({ type: GETTING_NOTES });
 
 		axios
-			.get(`${URL}`)
+			.get(URL)
 			.then(response => {
 				dispatch({ type: GET_NOTES, payload: response.data });
 			})
