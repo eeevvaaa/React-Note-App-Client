@@ -15,12 +15,8 @@ class EditView extends Component {
 		this.props.getNote(this.props.match.params.id);
 	}
 
-	showModal = () => {
-		this.setState({ show: true });
-	};
-
-	hideModal = () => {
-		this.setState({ show: false });
+	toggleModal = () => {
+		this.setState({ show: !this.state.show });
 	};
 
 	handleInput = e => {
@@ -50,8 +46,7 @@ class EditView extends Component {
 				content={this.state.content}
 				note={note}
 				getNotes={this.getNotes}
-				hideModal={this.hideModal}
-				showModal={this.showModal}
+				toggleModal={this.toggleModal}
 				show={this.state.show}
 			/>
 		);

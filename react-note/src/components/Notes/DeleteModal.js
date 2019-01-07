@@ -8,17 +8,15 @@ import {
 } from '../../styles';
 
 const DeleteModal = props => {
-	const showHideClassName = props.show ? 'block' : 'none';
-
 	return (
-		<ModalDiv className={showHideClassName}>
+		<ModalDiv>
 			<ModalMain className="modal-main">
 				<ModalP>Are you sure you want to delete this?</ModalP>
 				<DeleteButton onClick={e => props.deleteNote(e, props.noteID)}>
 					Delete
 				</DeleteButton>
 
-				<CancelButton onClick={props.hideModal}>No</CancelButton>
+				<CancelButton onClick={props.toggleModal}>No</CancelButton>
 			</ModalMain>
 		</ModalDiv>
 	);

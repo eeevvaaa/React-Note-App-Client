@@ -19,12 +19,9 @@ class DetailView extends Component {
 		this.props.history.push('/');
 	};
 
-	showModal = () => {
-		this.setState({ show: true });
-	};
-
-	hideModal = () => {
-		this.setState({ show: false });
+	toggleModal = e => {
+		e.preventDefault();
+		this.setState({ show: !this.state.show });
 	};
 
 	render() {
@@ -39,8 +36,7 @@ class DetailView extends Component {
 				<Note
 					note={note}
 					deleteNote={this.deleteNote}
-					hideModal={this.hideModal}
-					showModal={this.showModal}
+					toggleModal={this.toggleModal}
 					show={this.state.show}
 				/>
 			);
