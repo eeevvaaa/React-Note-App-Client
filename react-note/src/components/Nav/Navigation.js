@@ -22,6 +22,11 @@ export default class Navigation extends Component {
 							+ Create New Note
 						</NavLink>
 					</NavButton>
+					<NavButton>
+						<NavLink className="button" to="/logout">
+							Log Out
+						</NavLink>
+					</NavButton>
 				</Wrapper>
 			</Container>
 		);
