@@ -13,19 +13,15 @@ export default class Navigation extends Component {
 						Notes
 					</Heading>
 					<NavButton>
-						<NavLink className="button" exact to="/">
+						<NavLink exact to="/">
 							View Your Notes
 						</NavLink>
 					</NavButton>
 					<NavButton>
-						<NavLink className="button" to="/new">
-							+ Create New Note
-						</NavLink>
+						<NavLink to="/new">+ Create New Note</NavLink>
 					</NavButton>
 					<NavButton>
-						<NavLink className="button" to="/logout">
-							Log Out
-						</NavLink>
+						<NavLink to="/login">Log Out</NavLink>
 					</NavButton>
 				</Wrapper>
 			</Container>
