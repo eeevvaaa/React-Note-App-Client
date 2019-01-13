@@ -21,7 +21,9 @@ export default class Navigation extends Component {
 						<NavLink to="/new">+ Create New Note</NavLink>
 					</NavButton>
 					<NavButton>
-						<NavLink to="/login">Log Out</NavLink>
+						<NavLink to="/login" onClick={this.props.logOut}>
+							Log Out
+						</NavLink>
 					</NavButton>
 				</Wrapper>
 			</Container>
