@@ -11,6 +11,10 @@ import {
 	NoteContent
 } from '../../styles';
 
+const truncate = content => {
+	return content.length > 100 ? `${content.slice(0, 97)} ...` : content;
+};
+
 const NotesList = props => {
 	return (
 		<NotesContainer>
@@ -23,7 +27,7 @@ const NotesList = props => {
 							<TitleHeading>{note.title}</TitleHeading>
 						</Link>
 						<Hr />
-						<NoteContent>{note.content}</NoteContent>
+						<NoteContent>{truncate(note.content)}</NoteContent>
 					</NoteCard>
 				))}
 			</NotesWrapper>
