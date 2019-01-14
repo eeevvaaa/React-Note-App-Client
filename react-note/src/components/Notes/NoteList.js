@@ -12,7 +12,7 @@ import {
 } from '../../styles';
 
 const truncate = content => {
-	return content.length > 100 ? `${content.slice(0, 97)} ...` : content;
+	return content.length > 130 ? `${content.slice(0, 127)} ...` : content;
 };
 
 const NotesList = props => {
